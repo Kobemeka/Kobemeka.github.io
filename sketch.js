@@ -10,26 +10,26 @@ function setup() {
 function draw() {
   i = 2*second()*Math.PI/(60); //second
   m = 2*minute()*Math.PI/(60); //minute
-  h = 2*minute()*Math.PI/(24); //hour
+  h = 4*hour()*Math.PI/(24); //hour
   background((hour()+minute()+second())*1.8.toString(),(minute()+second())*2.161.toString(),(second())*4.322.toString());
   textSize(50);
   //text((hour().toString()+'.'+minute().toString()+'.'+second().toString()),width/2-tw,height/2-th,tw,th);
   //text((hour().toString()+'.'+minute().toString()+'.'+second().toString()),width/2+Math.sin(i)*r,height/2-Math.cos(i)*r);
   text((hour().toString()+'.'+minute().toString()+'.'+second().toString()),width/2,height/4);
-  textSize(15);
+  textSize(20);
   text('rgb-color: ~ '+(Math.floor((hour()+minute()+second())*1.8).toString()+'-'+Math.floor((minute()+second())*2.161).toString()+'-'+Math.floor((second())*4.322).toString()),width*1.5/2,height*1.5/2);
   if(contrast([(hour()+minute()+second())*1.8,(minute()+second())*2.161,second()*4.322],[255,255,255])>4.5){
     drawArrowI(i);
     drawArrowM(m);
     drawArrowH(h);
-    //stroke(255,255,255);
+    stroke(255,255,255);
     //strokeWeight(0.5);
     fill(255,255,255);
   }else{
     drawArrowI(i);
     drawArrowM(m);
     drawArrowH(h);
-    //stroke(0,0,0);
+    stroke(0,0,0);
     //strokeWeight(0.5);
     fill(0,0,0);
   }
@@ -58,7 +58,7 @@ function drawArrowI(i_){
   line(width/2,height/2, width/2+Math.sin(i_)*r, height/2-Math.cos(i_)*r);
   textSize(30);
   text((second()).toString(),width/2+Math.sin(i_)*r, height/2-Math.cos(i_)*r);
-  fill(0,0,0);
+  
   //line(width/2+Math.sin(i_)*r, height/2-Math.cos(i_)*r,width/2+Math.sin(i_)*r+100, height/2-Math.cos(i_)*r+100);
   //line(width/2+Math.sin(i_)*r, height/2-Math.cos(i_)*r,width/2+Math.sin(i_)*r-100, height/2-Math.cos(i_)*r-100);
 }
@@ -66,7 +66,7 @@ function drawArrowM(i_){
   line(width/2,height/2, width/2+Math.sin(i_)*r, height/2-Math.cos(i_)*r);
   textSize(30);
   text((minute()).toString(),width/2+Math.sin(i_)*r, height/2-Math.cos(i_)*r);
-  fill(0,0,0);
+  
   //line(width/2+Math.sin(i_)*r, height/2-Math.cos(i_)*r,width/2+Math.sin(i_)*r+100, height/2-Math.cos(i_)*r+100);
   //line(width/2+Math.sin(i_)*r, height/2-Math.cos(i_)*r,width/2+Math.sin(i_)*r-100, height/2-Math.cos(i_)*r-100);
 }
@@ -74,7 +74,7 @@ function drawArrowH(i_){
   line(width/2,height/2, width/2+Math.sin(i_)*r, height/2-Math.cos(i_)*r);
   textSize(30);
   text((hour()).toString(),width/2+Math.sin(i_)*r, height/2-Math.cos(i_)*r);
-  fill(0,0,0);
+  
   //line(width/2+Math.sin(i_)*r, height/2-Math.cos(i_)*r,width/2+Math.sin(i_)*r+100, height/2-Math.cos(i_)*r+100);
   //line(width/2+Math.sin(i_)*r, height/2-Math.cos(i_)*r,width/2+Math.sin(i_)*r-100, height/2-Math.cos(i_)*r-100);
 }
