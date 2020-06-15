@@ -7,7 +7,7 @@ function setup() {
 }
   
 function draw() {
-  r = height/5;
+  r = height/4.4;
   i = 2*second()*Math.PI/(60); //second
   m = 2*minute()*Math.PI/(60); //minute
   h = 4*hour()*Math.PI/(24); //hour
@@ -33,7 +33,7 @@ function draw() {
     stroke(0,0,0);
     strokeWeight(0);
     textSize(50);
-    text((hour().toString()+'.'+minute().toString()+'.'+second().toString()),width/10,height/2);
+    text((hour().toString()+'.'+minute().toString()+'.'+second().toString()),0,height/10);
     textSize(20);
     text('rgb-color: ~ '+(Math.floor((hour()+minute()+second())*1.8).toString()+'-'+Math.floor((minute()+second())*2.161).toString()+'-'+Math.floor((second())*4.322).toString()),width*1.5/2,height*1.5/2);
     
