@@ -3,7 +3,7 @@ var r = 150;
 const hex = 0;
 
 function setup() {
-    createCanvas(windowWidth,windowHeight);   
+    createCanvas(windowWidth*97/100,windowHeight*97/100);   
 }
   
 function draw() {
