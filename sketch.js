@@ -7,7 +7,7 @@ function setup() {
 }
   
 function draw() {
-  r = windowHeight/5;
+  r = height/5;
   i = 2*second()*Math.PI/(60); //second
   m = 2*minute()*Math.PI/(60); //minute
   h = 4*hour()*Math.PI/(24); //hour
