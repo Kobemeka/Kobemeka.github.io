@@ -20,7 +20,7 @@ function draw() {
     textSize(50);
     text((hour().toString()+'.'+minute().toString()+'.'+second().toString()),0,height/10);
     textSize(20);
-    text('rgb-color: ~ '+(Math.floor((hour()+minute()+second())*(255/(59+59+23))).toString()+'-'+Math.floor((minute()+second())*(255/(59+59))).toString()+'-'+Math.floor((second())*(255/59)).toString()),width*1.6/2,height-10);
+    text('rgb-color: ~ '+(Math.floor((hour()+minute()+second())*(255/(59+59+23))).toString()+'-'+Math.floor((minute()+second())*(255/(59+59))).toString()+'-'+Math.floor((second())*(255/59)).toString()),width*1.5/2,height*1.5/2);
     drawArrowI(i);
     drawArrowM(m);
     drawArrowH(h);
@@ -35,7 +35,7 @@ function draw() {
     textSize(50);
     text((hour().toString()+'.'+minute().toString()+'.'+second().toString()),0,height/10);
     textSize(20);
-    text('rgb-color: ~ '+(Math.floor((hour()+minute()+second())*(255/(59+59+23))).toString()+'-'+Math.floor((minute()+second())*(255/(59+59))).toString()+'-'+Math.floor((second())*(255/59)).toString()),width*1.6/2,height-10);
+    text('rgb-color: ~ '+(Math.floor((hour()+minute()+second())*(255/(59+59+23))).toString()+'-'+Math.floor((minute()+second())*(255/(59+59))).toString()+'-'+Math.floor((second())*(255/59)).toString()),width*1.6/2,height*1.5/2);
     
     drawArrowI(i);
     drawArrowM(m);
