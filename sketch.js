@@ -13,7 +13,7 @@ function draw() {
   h = 4*hour()*Math.PI/(24); //hour
   background((hour()+minute()+second())*1.8.toString(),(minute()+second())*2.161.toString(),(second())*4.322.toString());
 
-  if(contrast([(hour()+minute()+second())*1.8,(minute()+second())*2.161,second()*4.322],[255,255,255])>4.5){
+  if(contrast([(hour()+minute()+second())*(255/(59+59+23)),(minute()+second())*(255/(59+59)),second()*(255/59)],[255,255,255])>4.5){
     fill(255,255,255);
     stroke(255,255,255);
     strokeWeight(0);
