@@ -7,6 +7,7 @@ function setup() {
 }
   
 function draw() {
+  r = windowHeight/5;
   i = 2*second()*Math.PI/(60); //second
   m = 2*minute()*Math.PI/(60); //minute
   h = 4*hour()*Math.PI/(24); //hour
@@ -65,34 +66,38 @@ function contrast(rgb1, rgb2) {
   return (brightest + 0.05)
        / (darkest + 0.05);
 }
-
+var facto = 1.2;
 function drawArrowI(i_){
+  var sc = 0.9;
   strokeWeight(4);
-  line(width/2,height/2, width/2+Math.sin(i_)*r*0.7, height/2-Math.cos(i_)*r*0.7);
+  line(width/2,height/2, width/2+Math.sin(i_)*r*sc,height/2-Math.cos(i_)*r*sc);
   textSize(30);
   strokeWeight(0);
-  text((second()).toString(),width/2+Math.sin(i_)*r*(1/.51), height/2-Math.cos(i_)*r*(1/.51));
+  text((second()).toString(),width/2+Math.sin(i_)*r*(facto/sc), height/2-Math.cos(i_)*r*(facto/sc));
   
 }
 function drawArrowM(i_){
+  var mc = 0.8;
   strokeWeight(4);
-  line(width/2,height/2, width/2+Math.sin(i_)*r*0.65, height/2-Math.cos(i_)*r*0.65);
+  line(width/2,height/2, width/2+Math.sin(i_)*r*mc, height/2-Math.cos(i_)*r*mc);
   textSize(30);
   strokeWeight(0);
-  text((minute()).toString(),width/2+Math.sin(i_)*r*(1/.65), height/2-Math.cos(i_)*r*(1/.65));
+  text((minute()).toString(),width/2+Math.sin(i_)*r*(facto/mc), height/2-Math.cos(i_)*r*(facto/mc));
   
 }
 function drawArrowH(i_){
+  var hc = 0.7;
   strokeWeight(4);
-  line(width/2,height/2, width/2+Math.sin(i_)*r*0.5, height/2-Math.cos(i_)*r*0.5);
+  line(width/2,height/2, width/2+Math.sin(i_)*r*hc, height/2-Math.cos(i_)*r*hc);
   textSize(30);
   strokeWeight(0);
-  text((hour()).toString(),width/2+Math.sin(i_)*r*(1/.7), height/2-Math.cos(i_)*r*(1/.7));
+  text((hour()).toString(),width/2+Math.sin(i_)*r*(facto/hc), height/2-Math.cos(i_)*r*(facto/hc));
   
   
 }
 function sArc(s_){
   strokeWeight(4);
-  ellipse(width/2,height/2,r/0.65,r/0.65)
-
+  ellipse(width/2,height/2,2*r,2*r)
+  
+  
 }
