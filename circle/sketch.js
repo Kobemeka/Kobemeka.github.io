@@ -35,7 +35,7 @@ function draw(){
 
     background(0,0,0);
     for(var a=0;a<ang;a++){
-        colorArray.push([random(255),random(255),random(255)])
+        colorArray.push([random(100,255),random(100,255),random(100,255)])
         fill(colorArray[a])
         rotate(PI/ang);
         drel(Math.sin(rw+10*a*2)*radius,0);
