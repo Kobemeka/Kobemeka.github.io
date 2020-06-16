@@ -12,10 +12,6 @@ var step = Math.PI/(16*16);
 var px = radius*Math.cos(initang);
 var py = radius*Math.sin(initang);
 
-
-
-
-
 function setup(){
     createCanvas(windowWidth,windowHeight);
     slider = createSlider(20,350,200,1);
@@ -49,7 +45,7 @@ function draw(){
 
     px = radius*Math.cos(angle);
     py = radius*Math.sin(angle);
-
+    
 
     if(angle<-initang+PI/2){
         step = - step; 
@@ -57,7 +53,7 @@ function draw(){
         step = -step;
     }
     angle = angle + step;
-    
+
     textSize(20);
     text('radius: '+radius.toString(),-width/2+10,-height/2+110);
 
