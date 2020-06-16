@@ -11,10 +11,52 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
     <script src="sketch.js"></script>
-
+    <style>
+      #bc{
+        margin:0;
+        padding: 0;
+        height: fit-content;
+      }
+      body {padding: 0; margin: 0; overflow:auto;}
+      .menu{
+        margin: 0;
+        padding: 0;
+        display: table;
+        text-align: center;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        /* height: 100%; */
+        background-color: black;
+      }
+      .menu li{
+        margin: 10%;
+        list-style: none;
+        display: table-cell;
+        text-align: center;
+        height: 100%;
+      }
+      a{
+        text-decoration: none;
+        color: inherit;
+        
+        color: white;
+        margin: auto;
+        padding: 1%;
+        border-radius: 25%;
+      }
+    </style>
     
   </head>
   <body>
-      
+    <div id="bc">
+      <ul class="menu">
+        <li><a class="menua" href="index.html">HOME</a></li>
+        <li><a class="menua" href="circle/">CIRCLES</a></li>
+      </ul>
+      <!-- <a href="circle/">circles</a> -->
+    </div>
+    
   </body>
+
 </html>

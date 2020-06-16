@@ -2,8 +2,14 @@ var i = 0;
 var r = 150;
 const hex = 0;
 
+
+
 function setup() {
-    createCanvas(windowWidth*97/100,windowHeight*97/100);   
+    
+    var myc = createCanvas(windowWidth,windowHeight); 
+    myc.parent('bc');
+    
+    
 }
   
 function draw() {
@@ -17,6 +23,7 @@ function draw() {
     fill(255,255,255);
     stroke(255,255,255);
     strokeWeight(0);
+    
     textSize(50);
     text((hour().toString()+'.'+minute().toString()+'.'+second().toString()),0,height/10);
     textSize(20);
@@ -26,12 +33,14 @@ function draw() {
     drawArrowH(h);
     noFill();
     sArc(i);
+    //menu.style.color = "white";
     //strokeWeight(0.5);
     
   }else{
     fill(0,0,0);
     stroke(0,0,0);
     strokeWeight(0);
+    
     textSize(50);
     text((hour().toString()+'.'+minute().toString()+'.'+second().toString()),0,height/10);
     textSize(20);
@@ -43,6 +52,9 @@ function draw() {
     noFill();
     
     sArc(i);
+    //menu.style.color = "black";
+   
+    
     //strokeWeight(0.5);
     
   }
