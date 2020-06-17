@@ -8,7 +8,7 @@ function setup(){
     
     createCanvas(windowWidth,windowHeight);
     slider = createSlider(1,40,20,1);
-    slider.position(10,10)
+    slider.position(10,100)
 
 }
 function draw(){
@@ -43,7 +43,7 @@ function draw(){
     rotate(PI);
     fill(255);
     textSize(30);
-    text('# of balls:'+ang.toString(),-width/2+10,-height/2+60);
+    text('# of balls:'+ang.toString(),-width/2+10,-height/2+150);
     
     // rotate(PI/ang);
     // drel(0,Math.cos(rw+10*15)*radius);
